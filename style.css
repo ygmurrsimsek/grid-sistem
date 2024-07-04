@@ -1,0 +1,128 @@
+/*sayfayi bölüypruz bu yöntemle1.
+
+.item1{
+    grid-area: Header;/*burada gridleri tanimladik*
+}
+.item2{
+    grid-area:Menu;
+}.item3{
+    grid-area: Main;
+}.item4{
+    grid-area: Right;
+}.item5{
+    grid-area: Footer;
+}
+
+.grid-container{
+    display: grid;/*grid sistemle calisacağimizi söylüyoruz
+    grid-template-areas: /*6 parca olarak ayarladik
+        'Header Header Header Header Header Header'
+        'Menu Main Main Main Right Right'
+        'Menu Footer Footer Footer Footer Footer ';/*alanlara ayiriyoruz header kismini 6 parcaya ayirdik.sonra menuye bir maine iki rightide ikiye ayirdik.
+    grid-gap:10px ;/* o mavi olanlar bosluk demek oralar 10px dedik*
+    background-color: darkblue;
+    padding: 10px;
+}
+.grid-container > div{
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+}
+*/
+/*DİS katmani yapiyoruz 2
+.grid-container{
+    display: grid;/*GRİDLE TÜM SATİRA ETKİ EDER.İNLİNE GRİD İSE ÇOK KÜCÜK BİR ALANDA OLUSTURUR.görüntü grid sistemden olussun dedik böylelikle iceriyide otomatikten izgara sisstemine yani grid sisteme dönüstürelim dmek oluyor
+    /*grid-template-areas: ;bir alan olmadiği için bunu kullanmaya grek yok
+    grid-template-columns:auto auto auto ;/* .alan yok ama sütunlar var . o yüzden colums diyrız. otomatik ayarlamasini istiyoruz sablonlari.3 sütun olarak ayarlamiş olduk
+    background-color: #2196F3;
+    padding: 10px;
+    /*burada grid sisteme boşluk oluşturmak istediğimizi söylüypuz gap boşluk ama sütuna mı yoksa satıra mı onu belirtiri<.aşağida.
+    grid-column-gap:50px;
+    grid-row-gap: 50px;/*row satir demek satirlar arasina koyduk grid-gap: 50px tek koddda  50px 150px ilk satir sonrasi column içindir.
+    grid-gap: 10px;
+
+}
+
+/*simdi ic divleri yapalim
+.grid-item{
+    background-color: rgba(255, 255,255,0.8);
+    padding: 20px;
+    text-align: centerö;
+    font-size: 32px;
+    border: 1px solid rgba(0,0,0,0.8);
+}
+
+
+.grid-container{
+    display: grid;
+    background-color: #2196F3;
+    grid-template-columns:auto auto auto ;/*sütun sayısı demek bunu 3 olarak belirttik mesela genişlik 600se 3 tane auto ile 3e böldük her kısmı auto olarak ayarlattik.tek auto olmak zorunda değil yanlara değerler verip 200 mesela 59px auto 56 falan diyipte  yapabilirdik autoda yine widthin 4 e bölümünden gelen değer kadar ayarlıcak.
+    /*grid-template-rows: ;satir sayisini belirtmiş oluruz böyle
+    padding: 10px;
+    grid-gap: 10px;
+    justify-content: end;/*konumunu ayarlamiş oluyoruz.yatay düzlemde
+    align-content:between ;/* ilke ve sona koyup ayarlıyor aralarını mesafeli ayarlıyor.içerigi ayarlıyor yerini.dikey düzlemde.
+}
+.grid-container > div{
+    background-color: rgba(255, 255,255,0.8);
+    padding: 20px 0;
+    text-align: center;
+    font-size: 32px;
+    border: 1px solid rgba(0,0,0,0.8);
+}
+/*sütunlari birleştirdik
+.item1{
+    grid-column-start: 1;/*grid sistemimi en baştan başlat dedik 1.sütündan.
+    grid-column-end:4;/*3. sütunda sonlansin dedik.3ü dahil etme.1 ve 2yi birleştir demiş olduk.4 deyince biri aşağki kaydi.*
+}
+/*satirlari birleştirelim
+.item1{
+    grid-row-start: 1;
+    grid-row-end:3;
+}
+
+*/
+
+
+/*GRİD SİSTEM3*/
+.grid-container{
+    display: grid;
+    background-color: #2196f3;
+    padding: 10px;
+    grid-gap: 10px;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+/*5 taneyken sonra sildik bu classı
+grid-item{
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+}*/
+
+/*5taneyken yaptik
+item1{
+    grid-column: 1 / span 2;/*ilk sütundan itibaren 2 sütunu birleştir dedik*
+    grid-row: 1; /*ilk satırda
+}
+item2{
+    grid-column: 3;
+    grid-row: 1 / span 2;/*3.sütunda ilk satırla 2 satiri birleştiricek
+}
+item3{
+    grid-column: 1 / span 3;
+    grid-row: 3;/*3. satırda 1.sütundan başla 3. sütuna kadar
+}*/
+
+
+/*15tane*/
+.grid-container > div{
+    background-color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 32px;
+}
+item1{
+    grid-column: 1 / span 5;/*5 sütunu birleşsin istedik 1 /5 4 ünü birleştirir.*/  
+}
